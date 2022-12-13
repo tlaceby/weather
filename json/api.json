@@ -1,0 +1,55 @@
+{
+	"@context": [
+		"https://geojson.org/geojson-ld/geojson-context.jsonld",
+		{
+			"@version": "1.1",
+			"wx": "https://api.weather.gov/ontology#",
+			"s": "https://schema.org/",
+			"geo": "http://www.opengis.net/ont/geosparql#",
+			"unit": "http://codes.wmo.int/common/unit/",
+			"@vocab": "https://api.weather.gov/ontology#",
+			"geometry": { "@id": "s:GeoCoordinates", "@type": "geo:wktLiteral" },
+			"city": "s:addressLocality",
+			"state": "s:addressRegion",
+			"distance": { "@id": "s:Distance", "@type": "s:QuantitativeValue" },
+			"bearing": { "@type": "s:QuantitativeValue" },
+			"value": { "@id": "s:value" },
+			"unitCode": { "@id": "s:unitCode", "@type": "@id" },
+			"forecastOffice": { "@type": "@id" },
+			"forecastGridData": { "@type": "@id" },
+			"publicZone": { "@type": "@id" },
+			"county": { "@type": "@id" }
+		}
+	],
+	"id": "https://api.weather.gov/points/42.8,-106.298",
+	"type": "Feature",
+	"geometry": { "type": "Point", "coordinates": [-106.298, 42.8] },
+	"properties": {
+		"@id": "https://api.weather.gov/points/42.8,-106.298",
+		"@type": "wx:Point",
+		"cwa": "RIW",
+		"forecastOffice": "https://api.weather.gov/offices/RIW",
+		"gridId": "RIW",
+		"gridX": 187,
+		"gridY": 92,
+		"forecast": "https://api.weather.gov/gridpoints/RIW/187,92/forecast",
+		"forecastHourly": "https://api.weather.gov/gridpoints/RIW/187,92/forecast/hourly",
+		"forecastGridData": "https://api.weather.gov/gridpoints/RIW/187,92",
+		"observationStations": "https://api.weather.gov/gridpoints/RIW/187,92/stations",
+		"relativeLocation": {
+			"type": "Feature",
+			"geometry": { "type": "Point", "coordinates": [-106.32058, 42.8436499] },
+			"properties": {
+				"city": "Casper",
+				"state": "WY",
+				"distance": { "unitCode": "wmoUnit:m", "value": 5191.2816909879 },
+				"bearing": { "unitCode": "wmoUnit:degree_(angle)", "value": 159 }
+			}
+		},
+		"forecastZone": "https://api.weather.gov/zones/forecast/WYZ020",
+		"county": "https://api.weather.gov/zones/county/WYC025",
+		"fireWeatherZone": "https://api.weather.gov/zones/fire/WYZ280",
+		"timeZone": "America/Denver",
+		"radarStation": "KRIW"
+	}
+}
